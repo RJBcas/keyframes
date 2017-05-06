@@ -1,0 +1,259 @@
+/*div {
+	background-color: #a8cf45;
+	display: inline-block;
+	font-family: 'Arial';
+	font-weight: bolder;
+	height: 100px;
+	margin: 20px 10px  20px;
+	padding: 5px 40px;
+	position: relative;
+	text-align: center;
+	vertical-align: middle;
+	width: 250px;
+}
+*/
+p {
+	padding-top: 25px;
+}
+/* Caja 1*/
+.caja:hover{
+	-webkit-animation: 3s cambia_color 1;
+
+}
+
+@-webkit-keyframes cambia_color{
+	0%, 75%{
+		background: blue;
+
+	}
+	50%{
+		background: red;
+	}
+}
+/*caja 2*/
+.caja1:hover{
+	-webkit-animation: 0.6s flash 4;
+}
+@-webkit-keyframes flash{
+	25% ,75%{
+		opacity: 0;
+	}
+	50%{
+		opacity: 1;
+	}
+
+}
+/*caja 2*/
+
+/*caja 3*/
+.caja2:hover{
+	-webkit-animation: 1s click 2;
+}
+@-webkit-keyframes click{
+	25%, 75%{
+		-webkit-transform:scale(0.8);
+	}
+	50%{
+		-webkit-transform:scale(1.2);
+	}
+}
+/*caja 3*/
+
+/*caja 4*/
+.caja3:hover{
+	-webkit-animation: 1s chicle 1;
+}
+@-webkit-keyframes chicle{
+	30%{
+		-webkit-transform:scaleX(1.25)  scaleY(0.75);
+	}
+	40%{
+		-webkit-transform:scaleX(0.75) scaleY(1.25);
+	}
+	60%{
+		-webkit-transform: scaleX(1.1) scaleY(0.9);
+	}
+	80%{
+		-webkit-transform:scaleX(0.9) scaleY(1.1);
+	}
+}
+/*caja 4*/
+/*caja 5*/
+.caja4:hover{
+	-webkit-animation: 1s vibrador infinite;
+}
+@-webkit-keyframes vibrador{
+	5%, 25%, 45% , 85%{
+		-webkit-transform:translateY(-10px);
+	}
+	15% ,35%,55%,75%{
+		-webkit-transform:translateY(10px);
+	}
+	10%, 30%, 50% ,90%{
+		-webkit-transform:translateX(-10px);
+	}
+	20% ,40%,60%,80%{
+		-webkit-transform:translateX(10px);
+	}
+}
+/*caja 5*/
+/*caja 6*/
+.caja5:hover{
+	-webkit-animation: 1s cartel 1;
+	/* centro de gravedad*/
+	-webkit-transform-origin: top center;
+}
+@-webkit-keyframes cartel{
+	25%{
+		-webkit-transform: rotate(20deg);
+	}
+	50%{
+		-webkit-transform: rotate(-15deg);
+	}
+	75%{
+		-webkit-transform: rotate(10deg);
+	}
+	90%{
+		-webkit-transform:rotate(-5deg);
+	}
+}
+/*caja 6*/
+/*caja 7*/
+.caja6:hover{
+	-webkit-animation:1s balanceo 1;
+}
+@-webkit-keyframes balanceo{
+	20%{
+		-webkit-transform: scale(0.7) rotate(-6deg);
+	}
+	40%, 60%{
+		-webkit-transform: scale(1.1) rotate(6deg);
+	}
+	50%, 90%{
+		-webkit-transform: scale(1.1) rotate(-6deg);
+	}
+}
+/*caja 7*/
+/*caja 8*/
+.caja7:hover{
+	-webkit-animation: 1s vaiven 1;
+}
+
+@-webkit-keyframes vaiven{
+	20%{
+		-webkit-transform: rotate(-10deg) translateX(-25%);
+	}
+	40%{
+		-webkit-transform: rotate(7deg) translateX(20%);
+	}
+	60%{
+		-webkit-transform: rotate(-5deg) translateX(-13%);
+	}
+	80%{
+		-webkit-transform: rotate(3deg) translateX(5%);
+	}
+
+
+}
+/*caja 8*/
+
+/*caja 9*/
+.caja8:hover{
+	-webkit-animation: 2s descolgado 1;
+	-webkit-transform-origin: top left;
+}
+@-webkit-keyframes descolgado{
+	20%, 60%{
+		-webkit-transform: rotate(80deg);
+	}
+	40%{
+		-webkit-transform: rotate(60deg);
+	}
+	
+	80%{
+		-webkit-transform: rotate(90deg);
+		opacity: 1;
+	}
+	100%{
+		-webkit-transform: translateY(400px);
+		opacity: 0;
+	}
+}
+/*caja 9*/
+/*caja 10*/
+
+.caja9:hover{
+	-webkit-animation: 1s inrotativo 1;
+}
+@-webkit-keyframes inrotativo{
+	0%{
+		opacity:0;
+		-webkit-transform: translateX(-100%) rotate(-260deg);
+	}
+
+}
+
+.caja10:hover{
+	-webkit-animation: 1s outrotativo 1;
+}
+@-webkit-keyframes outrotativo{
+100%{
+		opacity:0;
+		-webkit-transform: translateX(100%) rotate(260deg);
+	}
+
+}
+
+/*caja 10*/
+
+/*3d*/
+.c3d{
+	display: inline-block;
+	margin:50px;
+	width: 200px;
+	height: 200px;
+	position: relative;
+}
+.c3d >div{
+	border: 2px solid black;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
+.front{
+	background: green;
+}
+.back{
+	background: red;
+	-webkit-transform : translateZ(-100px) rotateY(90deg);
+	left: 100px;
+}
+.c3d{
+	transition-duration: 0.5s;
+	transform-style: preserve-3d;
+	transform-origin: left center;
+}
+.c3d:hover{
+	-webkit-transform: perspective(800px) rotateY(-80deg);
+}
+/*3d*/
+
+
+
+/*
+animation-name:
+	indica el nombre que tendra
+	el keyframe que se añadirá
+	a continuación
+animation-duration:
+	tiempo total de la animación;
+animation-iteration-count:
+	veces que se repetirá.para que 
+	sea en bucle pondremos el valor
+	"infinite";
+animation-delay:
+	retardo con el que comenzará a 
+	alicarse la reprodución de la
+	animación;
+*/
+
